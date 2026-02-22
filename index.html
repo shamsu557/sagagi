@@ -608,14 +608,28 @@ section { padding: 90px 5%; }
 }
 
 /* TEAM */
-#team { background: #ffffff; }
-
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
+}
+@media (min-width: 901px) {
+
+  /* CEO centered on first row */
+  .team-grid .team-card:first-child {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+
+  /* Force others to start on row 2 */
+  .team-grid .team-card:nth-child(2),
+  .team-grid .team-card:nth-child(3),
+  .team-grid .team-card:nth-child(4) {
+    grid-row: 2;
+  }
+
 }
 
 .team-card {
@@ -1346,7 +1360,25 @@ footer {
         </a>
       </div>
     </div>
-
+<!-- Marketing Manager -->
+<div class="team-card reveal">
+  <div class="team-image">
+    <img src="./assets/images/marketmanager.jpg" alt="Muhammad Sani Lawan - Marketing Manager">
+  </div>
+  <h3>Muhammad Sani Lawan</h3>
+  <span class="team-title">Marketing Manager</span>
+  <div class="team-contact">
+    <a href="mailto:muhammadsanilawan40@gmail.com">
+      <i class="fas fa-envelope"></i> muhammadsanilawan40@gmail.com
+    </a>
+    <a href="mailto:mslawan@hbsagagiagro.com.ng">
+      <i class="fas fa-envelope"></i> mslawan@hbsagagiagro.com.ng
+    </a>
+    <a href="tel:08165297120">
+      <i class="fas fa-phone"></i> 0816 529 7120
+    </a>
+  </div>
+</div>
   </div>
 </section>
 
